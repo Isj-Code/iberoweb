@@ -1,0 +1,49 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body
+		class="bg-gray-950 border-4 border-yellow-600 xl:border-transparent lg:border-transparent"
+	>
+		<Header />
+		<main class="max-y-xl px-4 m-auto">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	@font-face {
+		font-family: "Dalek";
+		src: url("/fonts/Dalek.woff") format("woff");
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		color: white;
+		background-size: 224px;
+	}
+	h2,
+	h3 {
+		font-family: "Dalek", monospace;
+	}
+</style>

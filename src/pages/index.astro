@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="En construcción">
+	<!-- Fotos de fondo -->
+	<div class="px-4 mx-auto max-w-xl max-y-lg">
+		<div class="mx-auto text-center flex flex-col lg:flex-row items-center">
+			<div>
+				<img
+					class="object-cover brightness-200 drop-shadow-xl"
+					src="logoIberosWhite.png"
+					alt="Logo Iberos"
+				/>
+			</div>
+			<div class="grow-0 bg-[url('fondoJYM.png')] bg-cover">
+				<img
+					class="object-scale-down xl:object-fill animate-pulse -rotate-12"
+					src="jymWhite.png"
+					alt="Logo Personajes"
+				/>
+			</div>
+		</div>
+	</div>
+</Layout>
